@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom animations */
+@import './animations.css';
+
+/* Velaa Clothing - Sophisticated pastel design system */
+
+@layer base {
+  :root {
+    /* Brand Colors - Enhanced vibrant palette */
+    --background: 0 0% 100%;
+    --foreground: 220 8% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 8% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 8% 15%;
+
+    /* Primary - Modern blue */
+    --primary: 220 100% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Soft lavender */
+    --secondary: 260 60% 92%;
+    --secondary-foreground: 220 8% 15%;
+
+    /* Muted - Light gray */
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    /* Accent - Coral pink */
+    --accent: 210 40% 96%;
+    --accent-foreground: 220 8% 15%;
+
+    /* Enhanced brand colors */
+    --coral: 14 85% 65%;
+    --sage: 120 25% 55%;
+    --warm-gray: 220 8% 46%;
+    --cream: 45 25% 95%;
+    --lavender: 260 60% 85%;
+    --mint: 150 60% 80%;
+    --peach: 25 85% 75%;
+    --rose: 350 70% 75%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 100% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with vibrant accents */
+    --background: 220 27% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 27% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 27% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 220 100% 60%;
+    --primary-foreground: 220 27% 8%;
+
+    --secondary: 220 27% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 27% 12%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 220 27% 12%;
+    --accent-foreground: 0 0% 95%;
+
+    /* Dark mode enhanced colors */
+    --coral: 14 70% 55%;
+    --sage: 120 20% 40%;
+    --warm-gray: 220 9% 65%;
+    --cream: 45 15% 15%;
+    --lavender: 260 40% 65%;
+    --mint: 150 40% 60%;
+    --peach: 25 70% 65%;
+    --rose: 350 50% 65%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 27% 18%;
+    --input: 220 27% 18%;
+    --ring: 220 100% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-light;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-light tracking-tight;
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--cream)), hsl(var(--secondary)));
+  }
+
+  .gradient-coral {
+    background: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--peach)));
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--lavender)), hsl(var(--cream)));
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--coral)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
